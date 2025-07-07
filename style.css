@@ -19,7 +19,7 @@ header{
   align-items: center;
 }
 
-
+/*Header*/
 .navbar{
 
       position: fixed;
@@ -124,5 +124,60 @@ header{
 .zoom {
   animation: zoomIn 2s ease-in-out;
 }
+/* fin header*/
 
+/*Inicio del Main*/
 
+.Main_container{
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.Main_informacion{
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Main_informacion_texto{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Main_informacion_texto span{
+  font-family:var(--navbar-texto);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-principal);
+}
+
+.Main_informacion_texto p{
+  font-family:var(--navbar-texto);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  color:  black;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.Main_informacion_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.Main_informacion_img img{
+  padding-top: 10px;
+  width: 70%;
+  height: 100%;
+}
+
+/*fin del Main*/

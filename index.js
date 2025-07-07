@@ -2,10 +2,10 @@ const animacion = document.querySelector('.animacion');
 animacion.classList.add("zoom");
 
 const imagenes = [
-    "./cosecha2.jpg",
-    "./cosecha3.jpg",
-    "./cosecha4.jpg",
-    "./cosecha5.jpg"
+    "./imagenes/cosecha2.jpg",
+    "./imagenes/cosecha3.jpg",
+    "./imagenes/cosecha4.jpg",
+    "./imagenes/cosecha5.jpg"
     
   ];
 
