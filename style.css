@@ -128,56 +128,50 @@ header{
 
 /*Inicio del Main*/
 
-.Main_container{
+.main-container {
   width: 100%;
-  height: 500px;
-  display: flex;
 }
 
-.Main_informacion{
-  margin-top: 15px;
+.seccion {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.quienes-somos .contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.quienes-somos .texto {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.quienes-somos .texto h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.quienes-somos .texto p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.quienes-somos .imagen {
+  flex: 1 1 400px;
+}
+
+.quienes-somos .imagen img {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.Main_informacion_texto{
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.Main_informacion_texto span{
-  font-family:var(--navbar-texto);
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--color-principal);
-}
-
-.Main_informacion_texto p{
-  font-family:var(--navbar-texto);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.8;
-  color:  black;
-  margin-top: 40px;
-  margin-left: 40px;
-}
-
-.Main_informacion_img{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-}
-
-.Main_informacion_img img{
-  padding-top: 10px;
-  width: 70%;
-  height: 100%;
-}
 
 /*fin del Main*/
