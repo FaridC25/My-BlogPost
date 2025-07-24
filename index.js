@@ -1,5 +1,15 @@
 const animacion = document.querySelector('.animacion');
+const Inferior  = document.querySelector('.Inferior')
+
+
+
 animacion.classList.add("zoom");
+
+const fecha_actual = new Date();
+const anoActual = fecha_actual.getFullYear();
+const ano_copy = document.createElement('a')
+ano_copy.innerText = "-"+anoActual
+Inferior.appendChild(ano_copy)
 
 const imagenes = [
     "./imagenes/cosecha2.jpg",
@@ -34,97 +44,97 @@ setInterval(() => {
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=861,fit=scale-down/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718654129298-Sin%20t%C3%83%C2%ADtulo%20(Post%20de%20Instagram).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718206147913-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(1).png'
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718207709963-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(1150%20x%201700%20px).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=861,fit=scale-down/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718207453893-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(3).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718206411066-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(2).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718653559319-Sin%20t%C3%83%C2%ADtulo%20(1500%20x%201920%20px)%20(1300%20x%201920%20px)%20(1800%20x%201920%20px).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718652919512-Sin%20t%C3%83%C2%ADtulo%20(1500%20x%201920%20px)%20(Tu%20historia).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718652654713-Sin%20t%C3%83%C2%ADtulo%20(1500%20x%201920%20px)%20(1).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
 productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=861,fit=scale-down/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718654129298-Sin%20t%C3%83%C2%ADtulo%20(Post%20de%20Instagram).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718206147913-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(1).png'
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg'
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718207709963-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(1150%20x%201700%20px).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=861,fit=scale-down/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718207453893-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(3).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 120,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718206411066-Sin%20t%C3%83%C2%ADtulo%20(1080%20x%201100%20px)%20(1080%20x%201200%20px)%20(2).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 400,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718653559319-Sin%20t%C3%83%C2%ADtulo%20(1500%20x%201920%20px)%20(1300%20x%201920%20px)%20(1800%20x%201920%20px).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 450,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718652919512-Sin%20t%C3%83%C2%ADtulo%20(1500%20x%201920%20px)%20(Tu%20historia).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
   productos.push({
   name: 'Agave Variegado',
   price: 500,
-  image: 'https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=582,h=582,fit=scale-down,q=100/cdn-ecommerce/store_01HWDCY929GSR319J5K304VR2Q%2Fassets%2F1718652654713-Sin%20t%C3%83%C2%ADtulo%20(1500%20x%201920%20px)%20(1).png',
+  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
 

@@ -8,9 +8,33 @@
   --color-principal: #4CAF50;
   --color-secundario: #ffffff;
   --color-terciario: rgb(255, 149, 0);
+   --color-cuarto: rgb(255, 0, 0);
   --navbar-texto:'Montserrat';
   --navbar-texto-tamano: 18px;
   --navbar-texto-animacion: 20px;
+}
+
+.fondo-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagenes/fondo2.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Manda el fondo al fondo */
+  
+ }
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* fondo oscuro semi-transparente */
+  z-index: 1;
 }
 
 header{
@@ -40,7 +64,7 @@ header{
 .navbar_menu a{
   font-family: var(--navbar-texto);
   font-size: var(--navbar-texto-tamano);
-  color: var(--color-terciario);
+  color: var(--color-principal);
   margin-left: 5px;
   font-weight: bold;
   text-decoration: none;
@@ -49,19 +73,19 @@ header{
 
 
 .navbar_menu a:hover{
-  color: var(--color-principal);
+  color: var(--color-cuarto);
   text-decoration: underline;
   font-size: var(--navbar-texto-animacion);
 }
 
 .navbar_menu svg{
-  fill: var(--color-terciario);
+  fill: var(--color-principal);
   width: 25px;
   height: 25px;
 }
 
 .navbar_menu svg:hover{
-  fill: var(--color-principal);
+  fill: var(--color-cuarto);
   width: 35px;
   height: 35px;
 }
@@ -156,17 +180,19 @@ header{
 
 .quienes-somos .texto h2 {
   font-family: var(--navbar-texto);
-  font-weight: 700;
-  color: var(--color-principal);
+  font-weight: 800;
+  color: var(--color-cuarto);
   font-size: 48px;
   margin-bottom: 20px;
 }
 
 .quienes-somos .texto p {
   font-family: var(--navbar-texto);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1.6;
+  color: var(--color-secundario);
+  /* color: var(--color-secundario); */
 }
 
 .quienes-somos .imagen {
@@ -185,7 +211,7 @@ header{
 /*catalogo*/
 
 .seccion_catalogo{
-  padding: 60px 20px;
+  padding: 40px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -197,10 +223,11 @@ header{
 
 .texto_catalogo h2{
   font-family: var(--navbar-texto);
-  font-weight: 700;
-  color: var(--color-principal);
+  font-weight: 800;
+  color: var(--color-cuarto);
   font-size: 48px;
   text-align: center;
+  
 }
 
 .catalogo-container {
@@ -252,6 +279,14 @@ header{
     background-color: var(--hospital-green);
     border-radius: 4px;
   }
+
+  .product-info p{
+    font-family: var(--navbar-texto);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color-secundario);
+  }
+
   .cards-container .product-info figure {
     margin: 0;
   }
@@ -270,7 +305,7 @@ header{
     font-size: var(--sm);
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--black);
+    color: var(--color-secundario);
   }
 
   /*detalles del producto*/
@@ -347,7 +382,7 @@ header{
   padding: 8px 12px;
   border: none;
   background: #4caf50;
-  color: white;
+  color: rgb(6, 255, 51);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -357,19 +392,20 @@ header{
 } */
 
 .catalogo_paginacion button {
-  background-color: #fff;
-  color: black;
+  background-color:rgba(0, 0, 0, 0) ;
+  color: var(--color-secundario);
   border: none;
   padding: 8px 16px;
   font-size: 13px;
   cursor: pointer;
-  border-radius: 100%;
+  
 }
 
 .catalogo_paginacion button:hover {
-  color: var(--color-terciario);
   text-decoration: underline;
   font-size: 16px;
+  border-radius: 100%;
+  background-color: var(--color-cuarto);
 }
 
 
@@ -378,7 +414,7 @@ header{
   content: "\f104";
   font-weight: 900; /* necesario para íconos sólidos */
   font-size: 15px;
-  color: black;
+  color: var(--color-secundario);
 }
 
 #siguiente::before {
@@ -386,22 +422,22 @@ header{
   content: "\f105";
   font-weight: 900; /* necesario para íconos sólidos */
   font-size: 15px;
-  color: black;
+  color: var(--color-secundario);
 }
 
 #anterior:hover {
-  background-color: var(--color-terciario);
+  background-color: var(--color-cuarto);
 }
 
 #siguiente:hover {
-  background-color: var(--color-terciario);
+  background-color: var(--color-cuarto);
 }
 /*fin paginacion Catalogo*/
 
 /*Punto de venta*/
 
 .seccion_punto_venta{
-  padding: 60px 20px;
+  padding: 20px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -412,8 +448,8 @@ header{
 
 .texto_punto_venta h2{
   font-family: var(--navbar-texto);
-  font-weight: 700;
-  color: var(--color-principal);
+  font-weight: 800;
+  color: var(--color-cuarto);
   font-size: 48px;
   text-align: center;
 }
@@ -428,4 +464,171 @@ header{
   flex-direction: column;
 }
 
+.texto_punto_venta_horario{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.texto_punto_venta_horario h3{
+  font-family: var(--navbar-texto);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-secundario);
+}
+
+.texto_punto_venta_horario h4{
+  font-family: var(--navbar-texto);
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-cuarto);
+  margin-top: 15px;
+}
+
+.texto_punto_venta_horario p{
+  font-family: var(--navbar-texto);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+}
 /*fin del Main*/
+
+/*footer*/
+footer{
+  background-color: var(--color-principal);
+  width: 100%;
+}
+
+.superior{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 60px;
+}
+
+.superior h1{
+  font-family: var(--navbar-texto);
+  font-weight: 600;
+  color: var(--color-secundario);
+  font-size: 18px;
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 3px;
+  width: 300px; /* más ancho que el texto */
+}
+
+.superior li{
+  font-family: var(--navbar-texto);
+  font-weight: 500;
+  color: var(--color-secundario);
+  font-size: 16px;
+  padding-top: 10px;
+  list-style: none;
+}
+
+.superior a{
+  font-family: var(--navbar-texto);
+  font-weight: 500;
+  color: var(--color-secundario);
+  font-size: 16px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.superior{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.footer_entidades{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_entidades_contenedor{
+  width: 200px;
+  height: 150px;
+}
+
+.footer_entidades_contenedor img{
+  width: 100%;
+  height: 100%;
+}
+
+.item_3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer_icontec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_icontec_contenedor{
+  width: 200px;
+  height: 80px;
+}
+
+.footer_icontec_contenedor img{
+  width: 100%;
+  height: 100%;
+}
+
+.item_4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_Escudo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_Escudo_contenedor{
+  width: 100px;
+  height: 80px;
+}
+
+.footer_Escudo_contenedor img{
+  width: 100%;
+  height: 100%;
+}
+
+.Inferior{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid var(--color-secundario);
+}
+
+.Inferior h1{
+ font-family: var(--navbar-texto);
+  font-weight: 600;
+  color: var(--color-secundario);
+  font-size: 18px;
+}
+
+.Inferior a{
+ font-family: var(--navbar-texto);
+  font-weight: 600;
+  color: var(--color-secundario);
+  font-size: 18px;
+}
+/*Fin footer*/
