@@ -1,6 +1,6 @@
 const animacion = document.querySelector('.animacion');
 const Inferior  = document.querySelector('.Inferior')
-
+ 
 
 
 animacion.classList.add("zoom");
@@ -168,12 +168,19 @@ productos.push({
     const productInfoDiv = document.createElement('div');
   
     const productPrice = document.createElement('p');
-    productPrice.innerText = '$' + item.price;
+    productPrice.innerText = '$ ' + item.price + ' COP';
+    productPrice.classList.add('product-info-price')
     const productName = document.createElement('p');
     productName.innerText = item.name;
-  
-    productInfoDiv.appendChild(productPrice);
+     productName.classList.add('product-info-Name')
+
+     const ProductSelection = document.createElement('div')
+     ProductSelection.classList.add('Product_Selection') 
+    
     productInfoDiv.appendChild(productName);
+    productInfoDiv.appendChild(productPrice);
+    productInfoDiv.appendChild(ProductSelection);
+    
   
     //const productInfoFigure = document.createElement('figure');
     const productImgCart = document.createElement('img');
@@ -215,7 +222,7 @@ productos.push({
 
   // Mostrar la primera página al cargar
   mostrarCatalogo(paginaActual);
-
+  const producto = document.querySelector('.product-card')
 
   document.getElementById("anterior").addEventListener("click", () => {
   if (paginaActual > 1) {
@@ -231,3 +238,58 @@ document.getElementById("siguiente").addEventListener("click", () => {
     mostrarCatalogo(paginaActual);
   }
 });
+
+document.querySelector('.catalogo').addEventListener("mouseover", (event) => {
+  const tarjeta = event.target.closest('.product-card')
+  console.log(tarjeta)
+  if(tarjeta != null ){
+  const precio_producto = tarjeta.querySelector('.product-info-price')
+  precio_producto.style.paddingBottom = "10px";
+  precio_producto.style.borderBottom = "2px solid var(--color-principal)";
+  }
+  
+ })
+
+
+ document.querySelector('.catalogo').addEventListener("mouseout", (event) => {
+  const tarjeta = event.target.closest('.product-card')
+  console.log(tarjeta)
+  if(tarjeta != null ){
+  const precio_producto = tarjeta.querySelector('.product-info-price')
+  precio_producto.style.paddingBottom = "";
+  precio_producto.style.borderBottom = "";
+  }
+  
+ })
+
+// producto.addEventListener('click',MostrarPorducto)
+
+// function MostrarPorducto(){
+//   const fondo = document.createElement("div");
+//   fondo.style.position = "fixed";
+//   fondo.style.top = 0;
+//   fondo.style.left = 0;
+//   fondo.style.width = "100%";
+//   fondo.style.height = "100%";
+//   fondo.style.backgroundColor = "rgba(0,0,0,0.7)";
+//   fondo.style.zIndex = 9999;
+//   fondo.style.display = "flex";
+//   fondo.style.justifyContent = "center";
+//   fondo.style.alignItems = "center";
+
+//   document.body.appendChild(fondo);
+//   document.body.style.overflow = "hidden"
+// }
+
+document.querySelector('.burbuja_whatsapp').addEventListener('click', function () {
+
+  const imagenURL = "file:///C:/Users/Jurgen/Documents/Pagina%20Villa%20Juliana/imagenes/WhatsApp%20Image%202025-07-09%20at%2011.38.33%20AM.jpeg";
+  const mensaje = `Hola, me interesa esta imagen: ${imagenURL}`;
+  const mensajeCodificado = encodeURIComponent(mensaje);
+  const numero = "573182330968";
+  const enlace = `https://web.whatsapp.com/send?phone=${numero}&text=${mensajeCodificado}`;
+
+  //  const enlace = 'https://web.whatsapp.com/send?phone=573182330968&text=mamelo'
+   // Abrir en una nueva ventana
+  window.open(enlace, '_blank');
+})
