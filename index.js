@@ -293,3 +293,17 @@ document.querySelector('.burbuja_whatsapp').addEventListener('click', function (
    // Abrir en una nueva ventana
   window.open(enlace, '_blank');
 })
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // solo se anima una vez
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in-section').forEach(section => {
+  observer.observe(section);
+});
