@@ -41,6 +41,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 /*Header*/
@@ -96,6 +97,10 @@ header{
    align-items: center;
 }
 
+.navbar_menu_phone{
+  display: none;
+}
+
 .logo_navbar{
   width: 100px;
   height: 90px;
@@ -115,20 +120,27 @@ header{
       color: black;
 }
 
-.Contenedor_imagenes{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-   border-bottom-left-radius: 10px;
-   border-bottom-right-radius: 10px;
-    display: flex;
+.Contenedor_imagenes {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Contenedor_imagenes img{
-    width: 100%;
-    height: 100%;
+.Contenedor_imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover	;  /* Cambia de 'cover' a 'contain' para evitar recortes */
+  object-position: center;
+  display: block;
+}
+
+.navbar_menu_redes{
+  display: flex;
 }
 
 
@@ -546,12 +558,12 @@ footer{
   width: 100%;
 }
 
-.superior{
+/* .superior{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   padding: 25px 60px;
-}
+} */
 
 .superior h1{
   font-family: var(--navbar-texto);
@@ -686,3 +698,59 @@ footer{
   opacity: 1;
   transform: translateY(0);
 }
+
+/*responsive*/
+
+/*Header*/
+@media (max-width: 1310px) {
+  .navbar_menu_redes {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar_menu a {
+    display: none;
+  }
+
+  .navbar_menu_phone{
+    display: flex;
+  }
+
+  .superior{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.catalogo {
+  width: 100%;
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: repeat(1,1fr);
+  gap: 20px;
+  row-gap: 60px;
+  margin-bottom: 20px;
+  
+}
+
+.item_1 h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Contenedor_imagenes {
+    aspect-ratio: 4 / 3; /* un poco más cuadrada para móviles */
+  }
+
+}
+
+/*fin header*/
