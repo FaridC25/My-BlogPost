@@ -12,10 +12,11 @@ ano_copy.innerText = "-"+anoActual
 Inferior.appendChild(ano_copy)
 
 const imagenes = [
-    "./imagenes/cosecha2.jpg",
-    "./imagenes/cosecha3.jpg",
-    "./imagenes/cosecha4.jpg",
-    "./imagenes/cosecha5.jpg"
+  " ./imagenes/6.webp",
+    "./imagenes/7.webp",
+    "./imagenes/9.webp",
+    "./imagenes/11.webp",
+    "./imagenes/12.webp"
     
   ];
 

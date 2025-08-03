@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --color-principal: #4CAF50;
   --color-secundario: #ffffff;
@@ -12,6 +17,14 @@
   --navbar-texto:'Montserrat';
   --navbar-texto-tamano: 18px;
   --navbar-texto-animacion: 20px;
+
+   /*Moviles*/
+  --navbar-texto-tamano-movil: 14px;
+  --navbar-texto-animacion-movil: 16px;
+
+   /*Tablets*/
+  --navbar-texto-tamano-movil: 15px;
+  --navbar-texto-animacion-movil: 17px;
 }
 
 .fondo-fijo {
@@ -50,6 +63,7 @@ header{
       position: fixed;
       top: 0;
       width: 100%;
+      height: 70px;
       color: white;
       display: flex;
       justify-content: center;
@@ -60,7 +74,6 @@ header{
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       z-index: 1000;
-
 }
 .navbar_menu a{
   font-family: var(--navbar-texto);
@@ -121,7 +134,7 @@ header{
 }
 
 .Contenedor_imagenes {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   border-bottom-left-radius: 10px;
@@ -134,7 +147,7 @@ header{
 .Contenedor_imagenes img {
   width: 100%;
   height: 100%;
-  object-fit: cover	;  /* Cambia de 'cover' a 'contain' para evitar recortes */
+  object-fit: cover	; 
   object-position: center;
   display: block;
 }
@@ -565,6 +578,10 @@ footer{
   padding: 25px 60px;
 } */
 
+.item_1{
+  padding: 25px;
+}
+
 .superior h1{
   font-family: var(--navbar-texto);
   font-weight: 600;
@@ -597,6 +614,12 @@ footer{
   position: relative;
   display: grid;
   grid-template-columns: repeat(4,1fr);
+}
+
+.item_2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer_entidades{
@@ -723,7 +746,59 @@ footer{
     display: flex;
   }
 
-  .superior{
+
+.mapa_punto_venta iframe{
+  width: 100%;
+}
+
+
+.navbar{
+   height: 60px;
+}
+
+.logo_navbar{
+  width: 80px;
+  height: 70px;
+}
+
+.quienes-somos .texto {
+  text-align: center;
+}
+
+
+.quienes-somos .texto h2 {
+  font-size: 24px;
+}
+
+.texto_catalogo h2{
+  font-size: 22.5px; 
+}
+
+.texto_punto_venta h2{
+  font-size: 24px;
+}
+
+.texto_punto_venta_horario h3{
+  font-size: var(--navbar-texto-tamano-movil);
+}
+
+.texto_punto_venta_horario h4{
+  font-size: var(--navbar-texto-tamano-movil);
+}
+
+.texto_punto_venta_horario p{
+  font-size: var(--navbar-texto-tamano-movil);
+}
+
+
+.quienes-somos .texto p {
+  font-size: var(--navbar-texto-tamano-movil);
+  line-height: 1.6;
+  text-wrap: inherit;
+}
+
+
+.superior{
   position: relative;
   display: grid;
   grid-template-columns: repeat(1,1fr);
@@ -740,16 +815,72 @@ footer{
   
 }
 
+.superior h1{
+  font-size: var(--navbar-texto-tamano-movil);
+   
+}
+
+.superior li{
+  font-size: var(--navbar-texto-tamano-movil);
+}
+
+.superior a{
+  font-size: var(--navbar-texto-tamano-movil);
+}
+
+.item_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .item_1 h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 250px;
+}
+
+.item_1 ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Contenedor_imagenes {
     aspect-ratio: 4 / 3; /* un poco más cuadrada para móviles */
   }
+
+
+.footer_Escudo_contenedor{
+  width: 80px;
+  height: 60px;
+}
+
+.footer_Escudo_contenedor img{
+  width: 100%;
+  height: 100%;
+}
+
+.item_4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Inferior{
+  height: 40px;
+  width: 100%;
+}
+
+.Inferior h1{
+ font-size: var(--navbar-texto-tamano-movil);
+}
+
+.Inferior a{
+ font-size: var(--navbar-texto-tamano-movil);
+}
 
 }
 
