@@ -39,7 +39,7 @@
       <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">    <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"/></svg></a>
       </div>
     <div class="navbar_menu_phone">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+      <svg class="phone_menu" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
       <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path>
       </svg>
     </div>
@@ -71,25 +71,57 @@
     </div>
   </section>
 
-  <section class="fade-in-section">
-  <img src="tu-imagen.jpg" alt="Ejemplo">
-  <p>Este texto aparecerá con animación al hacer scroll</p>
-</section>
-
- 
   <section class="seccion_catalogo">
     <div class="texto_catalogo">
       <h2>Descubre Nuestros Productos🌿</h2>
     </div>
     
-     
+     <div class="Busqueda_catalogo">
+         
+        
+        <div class="Contenedor_Categorias">
+          <select class="categoria-select">
+          <option value="">Todas las categorías</option>
+          <option value="plantas">Plantas</option>
+          <option value="semillas">Semillas</option>
+          <option value="herramientas">Herramientas</option>
+        </select>
+        </div>
+
+       <div class="Contenedor_busqueda">
+         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
+         <path d="M 21 3 C 11.622998 3 4 10.623005 4 20 C 4 29.376995 11.622998 37 21 37 C 24.712383 37 28.139151 35.791079 30.9375 33.765625 L 44.085938 46.914062 L 46.914062 44.085938 L 33.886719 31.058594 C 36.443536 28.083 38 24.223631 38 20 C 38 10.623005 30.377002 3 21 3 z M 21 5 C 29.296122 5 36 11.703883 36 20 C 36 28.296117 29.296122 35 21 35 C 12.703878 35 6 28.296117 6 20 C 6 11.703883 12.703878 5 21 5 z"></path>
+         </svg>
+         <input  class="Barra_busqueda" type="text" placeholder="Buscar producto">
+      </div>
+
+
+     </div>
+  </div>
+
   <div class="catalogo-container">
+
+  <div class="Filtro_catalogo">
+      <div class="total_productos">
+           <p>Productos</p>
+      </div>
+    <div class="Ordenar">
+      <label for="">Ordenar Por:</label>
+      <select class="Filtro_Ordenar">
+      <option value="">Por Defecto</option>
+      <option value="">Nombre,A a Z</option>
+      <option value="plantas">Nombre,Z a A</option>
+      <option value="semillas">Precio,(De Menor a Mayor)</option>
+      <option value="herramientas">Precio,(De Mayor a Menor)</option>
+      </select>
+    </div>
+  </div>
+
   <div id="catalogo" class="catalogo"></div>
   <div class="catalogo_paginacion">
     <button id="anterior"></button>
     <div class="paginacion" id="paginacion"></div>
     <button id="siguiente"></button>
-  </div>
   </div>
   </section>
 

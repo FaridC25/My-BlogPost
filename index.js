@@ -120,23 +120,7 @@ productos.push({
   image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
 });
 
-  productos.push({
-  name: 'Agave Variegado',
-  price: 400,
-  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
-});
 
-  productos.push({
-  name: 'Agave Variegado',
-  price: 450,
-  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
-});
-
-  productos.push({
-  name: 'Agave Variegado',
-  price: 500,
-  image: './imagenes/WhatsApp Image 2025-07-09 at 11.38.33 AM.jpeg',
-});
 
 
   const itemsPorPagina = 8;
@@ -305,6 +289,24 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-document.querySelectorAll('.fade-in-section').forEach(section => {
+document.querySelectorAll('.contenido').forEach(section => {
   observer.observe(section);
+});
+
+document.querySelectorAll('.seccion_catalogo').forEach(section => {
+  observer.observe(section);
+});
+
+document.querySelectorAll('.seccion_punto_venta').forEach(section => {
+  observer.observe(section);
+});
+
+
+document.querySelector(".navbar_menu_phone").addEventListener("click", function() {
+  const navbar = document.querySelector(".navbar");
+  document.querySelector(".navbar").classList.toggle("open");
+  const phoneopen = !navbar.classList.contains('open')
+
+
+  
 });

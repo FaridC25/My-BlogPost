@@ -50,14 +50,14 @@ html, body {
   z-index: 1;
 }
 
+/*Header*/
+
 header{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-
-/*Header*/
 .navbar{
 
       position: fixed;
@@ -104,6 +104,12 @@ header{
   height: 35px;
 }
 
+.navbar_menu_phone svg:hover{
+  fill: var(--color-cuarto);
+  width: 25px;
+  height: 25px;
+}
+
 .navbar_menu{
    display: flex;
    justify-content: center;
@@ -128,9 +134,9 @@ header{
 }
 
 .navbar h1 {
-      margin: 0;
-      font-size: 20px;
-      color: black;
+  margin: 0;
+  font-size: 20px;
+  color: black;
 }
 
 .Contenedor_imagenes {
@@ -188,6 +194,7 @@ header{
   text-align: center;
 }
 
+
 .quienes-somos .contenido {
   max-width: 1200px;
   margin: 0 auto;
@@ -196,6 +203,15 @@ header{
   align-items: center;
   justify-content: center;
   gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.contenido.visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  will-change: opacity, transform;
 }
 
 .quienes-somos .texto {
@@ -240,6 +256,15 @@ header{
   width: 100%;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.seccion_catalogo.visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2s ease-out, transform 4s ease-out;
+  will-change: opacity, transform;
 }
 
 .texto_catalogo{
@@ -263,6 +288,45 @@ header{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.Filtro_catalogo{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.total_productos p{
+  font-family: var(--navbar-texto);
+  font-weight: 500;
+  color: var(--color-secundario);
+  font-size: 16px;
+}
+
+.Ordenar label{
+  font-family: var(--navbar-texto);
+  font-weight: 500;
+  color: var(--color-secundario);
+  font-size: 16px;
+}
+
+.Ordenar .Filtro_Ordenar{
+  width: 250px;
+  /* padding-left: 15px; */
+  height: 35px;
+  border: 1px solid #ccc;
+  /* padding: 12px 12px 12px 44px; */
+  border: 1px solid var(--color-secundario);
+  border-right-color: #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  outline: none;
+  color: black;
+  font-family: var(--navbar-texto);
+  background-color: var(--color-secundario);
 }
 
 .catalogo {
@@ -367,6 +431,64 @@ header{
   }
 
   /*detalles del producto*/
+
+  .Busqueda_catalogo{
+   margin-top: 50px;
+   display: flex;
+   width: 100%;
+   justify-content: center;
+  }
+
+  .Contenedor_busqueda{
+    position: relative;
+  }
+    .Contenedor_busqueda input {
+      width: 350px;
+      padding-left: 35px;
+      height: 45px;
+      /* padding: 12px 12px 12px 44px; */
+      border: 1px solid var(--color-secundario);
+      border-radius: 0px 5px 5px 0px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25;
+      outline: none;
+      color: black;
+      font-family: var(--navbar-texto);
+      background-color: var(--color-secundario);
+    }
+
+    .Contenedor_busqueda svg {
+      position: absolute;
+      top: 50%;
+      right: calc(50% - 175px  + 16px);
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+    }
+
+    .categoria-select {
+      width: 250px;
+      padding-left: 15px;
+      height: 45px;
+      border: 1px solid #ccc;
+      /* padding: 12px 12px 12px 44px; */
+      border: 1px solid var(--color-secundario);
+      border-right-color: #ccc;
+      border-radius: 5px 0px 0px 5px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25;
+      outline: none;
+      color: black;
+      font-family: var(--navbar-texto);
+      background-color: var(--color-secundario);
+    }
+
+    
+
+
   .product-detail-close {
     background: var(--white);
     width: 14px;
@@ -499,7 +621,18 @@ header{
   width: 100%;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(100px);
 }
+
+.seccion_punto_venta.visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+  will-change: opacity, transform;
+}
+
+
 .texto_punto_venta{
   text-align: center;
 }
@@ -710,18 +843,6 @@ footer{
 /*Fin footer*/
 
 
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  will-change: opacity, transform;
-}
-
-.fade-in-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /*responsive*/
 
 /*Header*/
@@ -746,19 +867,23 @@ footer{
     display: flex;
   }
 
+  .navbar{
+    height: 60px;
+    transition: height 0.4s ease;
+  }
+
+  .open{
+    align-items: start;
+    height: 250px;
+  }
+
+  .logo_navbar{
+    width: 80px;
+    height: 70px;
+  }
 
 .mapa_punto_venta iframe{
   width: 100%;
-}
-
-
-.navbar{
-   height: 60px;
-}
-
-.logo_navbar{
-  width: 80px;
-  height: 70px;
 }
 
 .quienes-somos .texto {

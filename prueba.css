@@ -1,0 +1,71 @@
+/* Estilos base del header */
+header {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icono de hamburguesa */
+.menu-toggle {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Menú oculto */
+.menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: #444;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Cuando está activo el menú */
+.menu.active {
+  display: flex;
+  animation: desplegar 0.3s ease forwards;
+}
+
+/* Animación de desplegar */
+@keyframes desplegar {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animación del icono hamburguesa → X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -5px);
+}
