@@ -1,71 +1,44 @@
-/* Estilos base del header */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
 header {
-  padding: 10px 20px;
   background: #333;
   color: white;
+  overflow: hidden; /* Oculta el contenido mientras se anima */
+  height: 60px; /* Altura inicial */
+  transition: height 0.5s ease; /* Animación suave */
+}
+
+header.open {
+  height: 200px; /* Altura al abrir */
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  height: 60px;
 }
 
-/* Icono de hamburguesa */
-.menu-toggle {
-  width: 30px;
-  height: 25px;
+.menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 4px;
-  background: white;
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-/* Menú oculto */
-.menu {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  background: #444;
-  width: 100%;
-  padding: 10px 0;
-  display: none;
-  flex-direction: column;
-  text-align: center;
+  padding: 0 20px;
 }
 
 .menu a {
-  padding: 10px;
   color: white;
   text-decoration: none;
+  padding: 8px 0;
 }
 
-/* Cuando está activo el menú */
-.menu.active {
-  display: flex;
-  animation: desplegar 0.3s ease forwards;
-}
-
-/* Animación de desplegar */
-/* @keyframes desplegar {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-} */
-
-/* Animación del icono hamburguesa → X */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(9px, -5px);
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }

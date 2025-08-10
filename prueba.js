@@ -1,7 +1,6 @@
-const toggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menu-btn");
+const header = document.querySelector("header");
 
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  menu.classList.toggle("active");
+menuBtn.addEventListener("click", () => {
+  header.classList.toggle("open");
 });
