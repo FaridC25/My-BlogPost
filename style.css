@@ -85,6 +85,29 @@ header{
   margin-left: 100px;
 }
 
+.navbar_menu{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.navbar_menu_phone {
+  width: 25px;
+  height: 15px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.navbar_menu_phone span {
+  display: block;
+  height: 3px;
+  background: var(--color-principal);
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
 
 .navbar_menu a:hover{
   color: var(--color-cuarto);
@@ -112,7 +135,7 @@ header{
 
 /* Animación del icono hamburguesa → X */
 .navbar_menu_phone.active span:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .navbar_menu_phone.active span:nth-child(2) {
@@ -120,33 +143,8 @@ header{
 }
 
 .navbar_menu_phone.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(10px, -7px);
+  transform: rotate(-45deg) translate(4px, -4px);
 }
-
-
-.navbar_menu{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.navbar_menu_phone {
-  width: 30px;
-  height: 25px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.navbar_menu_phone span {
-  display: block;
-  height: 4px;
-  background-color: var(--color-principal);
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
 
 .logo_navbar{
   width: 100px;
