@@ -52,10 +52,10 @@ header {
 }
 
 /* Animación de desplegar */
-@keyframes desplegar {
+/* @keyframes desplegar {
   from { transform: translateY(-20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-}
+} */
 
 /* Animación del icono hamburguesa → X */
 .menu-toggle.active span:nth-child(1) {

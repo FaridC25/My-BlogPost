@@ -104,11 +104,25 @@ header{
   height: 35px;
 }
 
-.navbar_menu_phone svg:hover{
-  fill: var(--color-cuarto);
-  width: 25px;
-  height: 25px;
+.navbar_menu_phone.active span {
+  background: var(--color-cuarto);
 }
+
+
+
+/* Animación del icono hamburguesa → X */
+.navbar_menu_phone.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 5px);
+}
+
+.navbar_menu_phone.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar_menu_phone.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -7px);
+}
+
 
 .navbar_menu{
    display: flex;
@@ -116,9 +130,23 @@ header{
    align-items: center;
 }
 
-.navbar_menu_phone{
+.navbar_menu_phone {
+  width: 30px;
+  height: 25px;
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
 }
+
+.navbar_menu_phone span {
+  display: block;
+  height: 4px;
+  background-color: var(--color-principal);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
 
 .logo_navbar{
   width: 100px;
@@ -863,24 +891,20 @@ footer{
     display: none;
   }
 
-  .navbar_menu_phone{
-    display: flex;
-  }
 
   .navbar{
     height: 60px;
     transition: height 0.4s ease;
   }
 
-  .open{
-    align-items: start;
-    height: 250px;
-  }
-
   .logo_navbar{
     width: 80px;
     height: 70px;
   }
+
+  .navbar_menu_phone {
+   display: flex;
+ }
 
 .mapa_punto_venta iframe{
   width: 100%;

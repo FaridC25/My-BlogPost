@@ -303,10 +303,8 @@ document.querySelectorAll('.seccion_punto_venta').forEach(section => {
 
 
 document.querySelector(".navbar_menu_phone").addEventListener("click", function() {
-  const navbar = document.querySelector(".navbar");
-  document.querySelector(".navbar").classList.toggle("open");
-  const phoneopen = !navbar.classList.contains('open')
-
-
+const navbar_phone = document.querySelector(".navbar_menu_phone")
+const navbar = document.querySelector(".navbar");
+navbar_phone.classList.toggle("active")
   
 });
