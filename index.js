@@ -306,5 +306,16 @@ document.querySelector(".navbar_menu_phone").addEventListener("click", function(
 const navbar_phone = document.querySelector(".navbar_menu_phone")
 const navbar = document.querySelector(".navbar");
 navbar_phone.classList.toggle("active")
-  
+
+const menu_burger_abierto = navbar_phone.classList.contains("active")
+const menu_phone =  document.querySelector(".navbar_menu_items_phone")
+
+// if (menu_burger_abierto){
+//     menu_phone.style.display = "flex"
+// }else{
+//     menu_phone.style.display = "none"
+// }
+
+menu_phone.classList.toggle("activephone")
+
 });

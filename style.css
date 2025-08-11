@@ -63,7 +63,6 @@ header{
       position: fixed;
       top: 0;
       width: 100%;
-      /* height: 70px; */
       color: white;
       display: flex;
       justify-content: center;
@@ -78,7 +77,7 @@ header{
 }
 
 .navbar_menu_items_phone{
-  width: 100%;
+  display: none;
 }
 
 .navbar_menu_items{
@@ -891,9 +890,58 @@ footer{
 
 @media (min-width: 320px) and (max-width: 500px) {
 
+.navbar_menu_items_phone{
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.navbar_menu_items_phone.activephone{
+  max-height: 500px;
+  opacity: 1;
+}
+
+
+.navbar_menu_items_phone a{
+  font-family: var(--navbar-texto);
+  font-size: var(--navbar-texto-tamano-movil);
+  color: var(--color-principal);
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.navbar_menu_redes_phone{
+  margin-top: 10px;
+}
+
+.navbar_menu_redes_phone a{
+  margin-left: 10px;
+}
+
+.navbar_menu_items_phone a:hover{
+  color: var(--color-cuarto);
+  text-decoration: underline;
+}
+
+.navbar_menu_redes_phone svg{
+  fill: var(--color-principal);
+}
+
+.navbar_menu_redes_phone svg:hover{
+  fill: var(--color-cuarto);
+}
+
   .navbar{
     display: flex;
     justify-content: space-between;
+    overflow: auto;
   }
 
   .navbar_menu_items{
